@@ -1,28 +1,28 @@
 {
     "info": {
-        "name": "Symfony Items API",
+        "name": "Symfony Loans API",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
     },
     "item": [
         {
-            "name": "Get All Items",
+            "name": "Get All Loans",
             "request": {
                 "method": "GET",
                 "header": [],
                 "url": {
-                    "raw": "{{base_url}}/api/items",
+                    "raw": "{{base_url}}/api/loans",
                     "host": [
                         "{{base_url}}"
                     ],
                     "path": [
                         "api",
-                        "items"
+                        "loans"
                     ]
                 }
             }
         },
         {
-            "name": "Create Item",
+            "name": "Create Loan",
             "request": {
                 "method": "POST",
                 "header": [
@@ -33,40 +33,40 @@
                 ],
                 "body": {
                     "mode": "raw",
-                    "raw": "{\n    \"name\": \"Test Item\",\n    \"description\": \"This is a test item\"\n}"
+                    "raw": "{\n    \"borrower\": \"John Doe\",\n    \"amount\": 1500.00,\n    \"interest_rate\": 5.5\n}"
                 },
                 "url": {
-                    "raw": "{{base_url}}/api/items",
+                    "raw": "{{base_url}}/api/loans",
                     "host": [
                         "{{base_url}}"
                     ],
                     "path": [
                         "api",
-                        "items"
+                        "loans"
                     ]
                 }
             }
         },
         {
-            "name": "Get Single Item",
+            "name": "Get Single Loan",
             "request": {
                 "method": "GET",
                 "header": [],
                 "url": {
-                    "raw": "{{base_url}}/api/items/1",
+                    "raw": "{{base_url}}/api/loans/1",
                     "host": [
                         "{{base_url}}"
                     ],
                     "path": [
                         "api",
-                        "items",
+                        "loans",
                         "1"
                     ]
                 }
             }
         },
         {
-            "name": "Update Item",
+            "name": "Update Loan",
             "request": {
                 "method": "PATCH",
                 "header": [
@@ -77,34 +77,34 @@
                 ],
                 "body": {
                     "mode": "raw",
-                    "raw": "{\n    \"name\": \"Updated Item\",\n    \"description\": \"Updated description\"\n}"
+                    "raw": "{\n    \"amount\": 2000.00\n}"
                 },
                 "url": {
-                    "raw": "{{base_url}}/api/items/1",
+                    "raw": "{{base_url}}/api/loans/1",
                     "host": [
                         "{{base_url}}"
                     ],
                     "path": [
                         "api",
-                        "items",
+                        "loans",
                         "1"
                     ]
                 }
             }
         },
         {
-            "name": "Delete Item",
+            "name": "Delete Loan",
             "request": {
                 "method": "DELETE",
                 "header": [],
                 "url": {
-                    "raw": "{{base_url}}/api/items/1",
+                    "raw": "{{base_url}}/api/loans/1",
                     "host": [
                         "{{base_url}}"
                     ],
                     "path": [
                         "api",
-                        "items",
+                        "loans",
                         "1"
                     ]
                 }

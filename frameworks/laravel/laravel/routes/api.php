@@ -2,8 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ItemController;
+use App\Http\Controllers\LoanController;
 
-Route::apiResource('items', ItemController::class)->only([
+Route::apiResource('loans', LoanController::class)->only([
     'index', 'store', 'update', 'destroy', 'show'
 ]);

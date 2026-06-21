@@ -11,16 +11,16 @@ final class Version20240101000000 extends AbstractMigration
 {
     public function getDescription(): string
     {
-        return 'Create item table';
+        return 'Create loan table';
     }
 
     public function up(Schema $schema): void
     {
-        $this->addSql('CREATE TABLE item (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, name VARCHAR(255) NOT NULL, description CLOB DEFAULT NULL)');
+        $this->addSql('CREATE TABLE loan (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, borrower VARCHAR(255) NOT NULL, amount NUMERIC(10, 2) NOT NULL, interest_rate NUMERIC(5, 2) NOT NULL)');
     }
 
     public function down(Schema $schema): void
     {
-        $this->addSql('DROP TABLE item');
+        $this->addSql('DROP TABLE loan');
     }
 }

@@ -2,17 +2,17 @@
 
 namespace App\Repository;
 
-use App\Entity\Item;
+use App\Entity\Loan;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Item>
+ * @extends ServiceEntityRepository<Loan>
  */
-class ItemRepository extends ServiceEntityRepository
+class LoanRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Item::class);
+        parent::__construct($registry, Loan::class);
     }
 }
